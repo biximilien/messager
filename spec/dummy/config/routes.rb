@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount SpMessages::Engine => "/messages"
+  mount SP::Messages::Engine => "/messages"
 end
