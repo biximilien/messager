@@ -1,4 +1,4 @@
-module SpMessages
+module SP::Messages
   module ApplicationHelper
   end
 end
