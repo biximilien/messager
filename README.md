@@ -1,14 +1,33 @@
-# SpMessages
-Short description and motivation.
+# Messages
+Messaging system for the SP project.
 
 ## Usage
-How to use my plugin.
+
+Add 'messageable' to model
+
+```ruby
+class User
+  messageable
+end
+```
+
+then call the message method
+
+```ruby
+@user.message(
+  from: current_user,
+  subject: 'Project inquiry',
+  body: 'Sir, ...')
+```
+
+if the alert method from alerts module is present (or a similar interface)
+sending a message will automatically alert the receiving user.
 
 ## Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'sp_messages'
+gem 'messages'
 ```
 
 And then execute:
@@ -18,7 +37,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install sp_messages
+$ gem install messages
 ```
 
 ## Contributing
