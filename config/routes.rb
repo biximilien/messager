@@ -1,4 +1,4 @@
-SP::Messages::Engine.routes.draw do
-  
+Messager::Engine.routes.draw do
+
   resources :messages
 end
