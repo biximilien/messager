@@ -1,27 +1,27 @@
-require 'rails_helper'
+module Messager
+  RSpec.describe Message, type: :model do
+    it { should belong_to :sender }
+    it { should belong_to :receiver }
 
-RSpec.describe Messager::Message, type: :model do
-  it { should belong_to :sender }
-  it { should belong_to :receiver }
+    it { should validate_presence_of :sender }
+    it { should validate_presence_of :receiver }
+    it { should validate_presence_of :subject }
+    it { should validate_presence_of :body }
 
-  it { should validate_presence_of :sender }
-  it { should validate_presence_of :receiver }
-  it { should validate_presence_of :subject }
-  it { should validate_presence_of :body }
+    describe '#sender' do
 
-  describe '#sender' do
+    end
 
-  end
+    describe '#receiver' do
 
-  describe '#receiver' do
+    end
 
-  end
+    describe '#body' do
 
-  describe '#body' do
+    end
 
-  end
+    describe '#subject' do
 
-  describe '#subject' do
-
+    end
   end
 end

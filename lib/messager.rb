@@ -1,5 +1,6 @@
-require "messager/engine"
+require 'messager/version'
+require 'messager/engine'
 
 module Messager
-# Your code goes here...
+  autoload :Messageable, 'messager/messageable'
 end

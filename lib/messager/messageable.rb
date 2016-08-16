@@ -1,19 +1,19 @@
-class Messager::Messageable
-  extend ActiveSupport::Concern
+module Messager
+  module Messageable
+    extend ActiveSupport::Concern
 
-  def message(args = {})
-    Messager::Message.create!
-      args.slice :sender, :subject, :body
-          .merge receiver: self
-          .compact
+    def message sender:, subject:, body:
+      Message.create!(
+        sender: sender,
+        subject: subject,
+        body: body,
+        receiver: self)
+    end
+
+    included do
+      has_many :messages,
+        as: :receiver,
+        class_name: 'Messager::Message'
+    end
   end
-
-  included do
-
-    has_many :messages,
-      as: :receiver,
-      class_name: 'Messager::Message'
-
-  end
-
 end
