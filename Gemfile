@@ -13,9 +13,4 @@ gemspec
 # To use a debugger
 gem 'byebug', group: [:development, :test]
 
-# PRY
-gem 'pry'
-
-group :test do
-  gem "shoulda-matchers"
-end
+gem 'shoulda-matchers', group: :test

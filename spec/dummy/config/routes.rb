@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Messager::Engine => "/messages"
+  mount Messager::Engine => "/messager"
 end
